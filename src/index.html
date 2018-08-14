@@ -8,9 +8,15 @@
   <link rel="stylesheet" type="text/css" href="css/mobile.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
   <link rel="stylesheet" type="text/css" href="css/radiobutton.css">
+
+  <script src="js/common.js"></script>
+  <script src="js/publicApp.js"></script>
+  <script src="js/start.js"></script>
+  <script src="js/searchFrukt.js"></script>
+  <script src="js/listFruktkorgar.js"></script>
 </head>
 
-<body class="spar-responsive nomargin">
+<body class="spar-responsive nomargin" onload="switchApp()" onhashchange="switchApp()">
   <div class="mainheader ielayoutfix header_blue_line"></div>
   <div class="ielayoutfix menu_bar1" id="menu_bar">
     <header class="spar-fluid-grid spar-grid-gridx12xkolumner menuwrapper">
@@ -19,10 +25,10 @@
           <div class="mobilemenuinside spar-jcrmenu-portlet spar-portlet mobile_menu">
             <div class="menu-container">
               <ul class="nav">
-                <li>
-                  <a href="#fruktSearch" title="">Frukt Sök</a>
+                <li id="menu_searchfrukt">
+                  <a href="#searchFrukt" title="">Frukt Sök</a>
                 </li>
-                <li>
+                <li id="menu_listfruktkorgar">
                   <a href="#listFruktkorgar" title="">Fruktkorgar</a>
                 </li>
               </ul>
@@ -42,20 +48,6 @@
             <div class="spar-row padding_top_line">
 
               <div class="pagecontent spar-layout" id="spar-content">
-                <div class="spar-text-portlet spar-use-margins">
-                  <div class="spar-text-portlet-content">
-                    <h2>Välkommen</h2>
-                    <h3>Här kan du söka efter frukter, samt se ett utdrag på samtliga fruktkorgar</h3>
-                  </div>
-                </div>
-
-                <div class="spar-text-portlet-content" id="spar-inner-content">
-                  <div class="start-alternativ">
-                    <a id="button_dr" class="button-link" href="#fruktSearch" title="">Frukt Sök</a>
-                    <a id="button_registerutdrag" class="button-link" href="#listFruktkorgar" title="">Fruktkorgar</a>
-                  </div>
-                </div>
-
               </div>
             </div>
 
@@ -65,8 +57,6 @@
     </div>
     <div class="spar-row contentFooter"></div>
   </div>
-
-  <script src="js/script.js"></script>
 </body>
 
 </html>

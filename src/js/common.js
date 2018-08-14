@@ -1,3 +1,9 @@
+const STATE_DONE = 4;
+
+var PAGE_NONE = 0;
+var PAGE_SEARCHFRUKT = 1;
+var PAGE_LISTFRUKTKORG = 2;
+
 let concurrentGlassOnCount = 0
 
 const glassOn = (text) => {
@@ -27,4 +33,15 @@ const loadPage = (href) => {
   xmlhttp.open("GET", href, false)
   xmlhttp.send()
   return xmlhttp.responseText
+}
+
+const getPage = () => {
+  switch (location.hash) {
+    case "#searchFrukt":
+      return PAGE_SEARCHFRUKT
+    case "#listFruktkorgar":
+      return PAGE_LISTFRUKTKORG
+    default:
+      return PAGE_NONE
+  }
 }
