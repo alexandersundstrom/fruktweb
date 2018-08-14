@@ -372,6 +372,7 @@ img#image_logo {
 
 #fruktTable {
     width: 100%;
+    border-collapse: collapse;
 }
 #fruktTable th {
     text-align: left;
@@ -391,16 +392,32 @@ img#image_logo {
     min-width: fit-content;
 }
 
-#fruktTable tr:nth-child(odd):not(:first-child) {
-    background-color: #d9d9d9;
-}
-
 #fruktTable tr:not(:first-child):hover {
     background-color: #68c0ea ;
     cursor: pointer;
 }
 
+#fruktTable tr:not(:first-child) {
+    border-bottom: 1px solid lightgray;
+}
+
 #fruktTable td {
     padding: 10px 0px 10px 0px;
     text-align: left;
+}
+
+#fruktkorg-details {
+    cursor: initial;
+    transition: height 1s, background-color 1s ease-in;
+    background-color: white;
+    height: 0px;
+
+}
+
+#fruktkorg-details:hover {
+    background-color: white;
+}
+
+.frukt-select {
+    padding: 3px 10px 3px 10px;
 }
