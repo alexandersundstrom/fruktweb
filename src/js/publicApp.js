@@ -16,5 +16,4 @@ const switchApp = () => {
     default:
       loadStart()
   }
-  // updateTitleForTjanst()
 }

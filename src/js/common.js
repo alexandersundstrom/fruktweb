@@ -1,8 +1,10 @@
-const STATE_DONE = 4;
+const STATE_DONE = 4
 
-var PAGE_NONE = 0;
-var PAGE_SEARCHFRUKT = 1;
-var PAGE_LISTFRUKTKORG = 2;
+const HTTP_OK = 200
+
+const PAGE_NONE = 0
+const PAGE_SEARCHFRUKT = 1
+const PAGE_LISTFRUKTKORG = 2
 
 let concurrentGlassOnCount = 0
 
