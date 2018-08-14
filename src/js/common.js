@@ -47,3 +47,16 @@ const getPage = () => {
       return PAGE_NONE
   }
 }
+
+const showWarningTeknisktFel = () => {
+  showWarning('Tekniskt fel', "Ett oförutsett fel har inträffat. Var god försök senare eller kontakta kundtjänst.")
+}
+
+const showWarning = (rubrik, text) => {
+  var content_div = document.getElementById("spar-inner-content")
+  content_div.innerHTML = "<p class='brodtextx'>\n"
+    + "<div class='viktigtext'>\n"
+    + "<h3><strong>" + rubrik + "</strong></h3>\n"
+    + text
+    + "</div>"
+}
