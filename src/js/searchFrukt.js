@@ -27,7 +27,7 @@ const loadSearchFrukt = () => {
 
   glassOn('Laddar...')
   // xmlhttp.open("GET", "rest/reklamsparr/status", true);
-  xmlhttp.open('GET', 'http://localhost:8080/frukt/unique-types', true)
+  xmlhttp.open('GET', 'rest/frukt/unique-types', true)
   xmlhttp.send()
 
   // const contentDiv = document.getElementById('spar-content')
