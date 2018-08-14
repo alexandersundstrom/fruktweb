@@ -412,5 +412,8 @@ img#image_logo {
 }
 .fruktkorg-details:hover {
     background-color: white;
+}
 
+.frukt-select {
+    padding: 3px 10px 3px 10px;
 }
