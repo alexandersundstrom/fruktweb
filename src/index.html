@@ -20,10 +20,10 @@
             <div class="menu-container">
               <ul class="nav">
                 <li>
-                  <a href="#reklamsparr" title="">Frukt Sök</a>
+                  <a href="#fruktSearch" title="">Frukt Sök</a>
                 </li>
                 <li>
-                  <a href="#reklamsparr" title="">Frukt Rapport</a>
+                  <a href="#listFruktkorgar" title="">Fruktkorgar</a>
                 </li>
               </ul>
             </div>
@@ -32,9 +32,42 @@
       </nav>
     </header>
   </div>
-  <p>This is the home page for the Frukt Web application. </p>
 
-  <script src="js/script.js"></script>
+  <div class="ielayoutfix bg_ljusgra">
+    <div>
+      <div class="ielayoutfix innehall_padding_top_bottom">
+        <div class="spar-fluid-grid spar-grid-gridx12xkolumner ielayoutfix bg_vit">
+          <div id="innehall">
+            <div class="spar-row innehall_line_top"></div>
+            <div class="spar-row padding_top_line">
+
+              <div class="pagecontent spar-layout" id="spar-content">
+                <div class="spar-text-portlet spar-use-margins">
+                  <div class="spar-text-portlet-content">
+                    <h2>Välkommen</h2>
+                    <h3>Här kan du söka efter frukter, samt se ett utdrag på samtliga fruktkorgar</h3>
+                  </div>
+                </div>
+
+                <div class="spar-text-portlet-content" id="spar-inner-content">
+                  <div class="start-alternativ">
+                    <a id="button_dr" class="button-link" href="#reklamsparr" title="">Frukt Sök</a>
+                    <a id="button_registerutdrag" class="button-link" href="#registerutdrag" title="">Fruktkorgar</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spar-row contentFooter"></div>
+  </div>
+  </div>
+
+<script src="js/script.js"></script>
 </body>
 
 </html>
