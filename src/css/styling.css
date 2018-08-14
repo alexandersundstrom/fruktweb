@@ -406,11 +406,15 @@ img#image_logo {
     text-align: left;
 }
 
-.fruktkorg-details {
+#fruktkorg-details {
     cursor: initial;
+    transition: height 1s, background-color 1s ease-in;
+    background-color: white;
+    height: 0px;
 
 }
-.fruktkorg-details:hover {
+
+#fruktkorg-details:hover {
     background-color: white;
 }
 
