@@ -31,3 +31,44 @@ const renderTypeOptions = (fruktTypes) => {
     fruktTypeSelector.appendChild(typeOption)
   })
 }
+
+const searchFrukt = () => {
+  const selectedFrukt = document.getElementById('frukt-type-selector');
+
+  if (selectedFrukt.value) {
+    const xmlhttp = new XMLHttpRequest()
+    xmlhttp.onreadystatechange = () => {
+      if (xmlhttp.readyState === STATE_DONE) {
+        glassOff()
+
+        if (xmlhttp.status === HTTP_OK) {
+          const fruktkorgar = JSON.parse(xmlhttp.responseText)
+          const fruktkorgarDiv = document.getElementById('fruktkorg-container');
+          fruktkorgarDiv.innerHTML = '';
+          const header = document.createElement('h3');
+          header.innerHTML = 'Resultat:';
+          fruktkorgarDiv.appendChild(header);
+          const fruktkorgList = document.createElement('ul');
+          fruktkorgar.forEach((fruktkorg) => {
+            const fruktKorgBullet = document.createElement('li');
+            let amount;
+            fruktkorg.fruktList.forEach((frukt) => {
+                if (frukt.type == selectedFrukt.value) {
+                  amount = frukt.amount;
+                }
+              }
+            );
+            fruktKorgBullet.innerHTML = `${fruktkorg.name}: ${amount} st`
+            fruktkorgList.appendChild(fruktKorgBullet);
+          })
+            fruktkorgarDiv.appendChild(fruktkorgList);
+
+        } else {
+          showWarningTeknisktFel()
+        }
+      }
+    }
+    glassOn('Laddar...')
+    xmlhttp.open('GET', 'rest/fruktkorg/search?fruktType=' + selectedFrukt.value, true)
+    xmlhttp.send()  }
+}
