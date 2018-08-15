@@ -39,9 +39,8 @@ const renderFruktkorgar = (fruktkorgar) => {
       return amount + frukt.amount
     }, 0)
     fruktkorgFruktAmountCell.className = 'fruktTableCell'
-
     const fruktkorgDateCell = document.createElement('td')
-    fruktkorgDateCell.innerHTML = 'super duper fake date'
+    fruktkorgDateCell.innerHTML = fruktkorg.lastChanged
     fruktkorgDateCell.className = 'fruktTableCell italic'
 
     tableRow.appendChild(fruktkorgNameCell)
