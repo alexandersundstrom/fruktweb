@@ -371,8 +371,8 @@ img#image_logo {
 }
 
 .fruktTable {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .fruktTable th {
@@ -381,11 +381,11 @@ img#image_logo {
 }
 
 .fruktTableCell {
-  min-width: fit-content;
+    min-width: fit-content;
 }
 
 .italic {
-  font-style: italic;
+    font-style: italic;
 }
 
 .fruktTableRow {
@@ -403,18 +403,20 @@ img#image_logo {
 }
 
 .fruktkorg-details {
-  cursor: initial;
-  transition: height 0.5s;
-  background-color: white;
-  height: 0px;
-  display: flex;
-  flex-direction: column;
-  padding-left: 25px;
+    cursor: initial;
+    transition: height 0.5s, background-color 1s;
+    background-color: white;
+    border-radius: 10px;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .frukt-details {
-  display: flex;
-  flex: 1 0 auto;
+    padding: 15px 0px 10px 20px;
 }
 
 #fruktkorg-details:hover {

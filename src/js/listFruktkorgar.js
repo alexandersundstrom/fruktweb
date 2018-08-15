@@ -80,7 +80,10 @@ const handleRowClick = (tableRow, index, fruktList) => {
       fruktkorgDetailsRow.appendChild(fruktCell);
 
       fruktkorgTable.insertBefore(fruktkorgDetailsRow, tableRow.nextSibling);
-      setTimeout(() => fruktDiv.style.height = `${fruktList.length * 20}px`)
+      setTimeout(() => {
+        fruktDiv.style.height = `${fruktList.length * 40}px`;
+        fruktDiv.style.backgroundColor = 'lightBlue'
+      })
     }
   }
 };
