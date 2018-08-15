@@ -82,7 +82,6 @@ const handleRowClick = (tableRow, index, fruktList) => {
       fruktkorgTable.insertBefore(fruktkorgDetailsRow, tableRow.nextSibling);
       setTimeout(() => {
         fruktDiv.style.height = `${fruktList.length * 40}px`;
-        fruktDiv.style.backgroundColor = 'lightBlue'
       })
     }
   }
