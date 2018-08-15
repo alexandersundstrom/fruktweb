@@ -1,4 +1,4 @@
-const clickedRows = []
+let clickedRows = []
 
 const loadListFruktkorgar = () => {
   const xmlhttp = new XMLHttpRequest()
@@ -11,6 +11,7 @@ const loadListFruktkorgar = () => {
       if (xmlhttp.status === HTTP_OK) {
         const fruktkorgar = JSON.parse(xmlhttp.responseText)
         renderFruktkorgar(fruktkorgar)
+        clickedRows = []
       } else {
         showWarningTeknisktFel()
       }
