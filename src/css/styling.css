@@ -404,7 +404,7 @@ img#image_logo {
 
 .fruktkorg-details {
   cursor: initial;
-  /* transition: height 1s, background-color 1s ease-in-out; */
+  transition: height 0.5s;
   background-color: white;
   height: 0px;
   display: flex;
